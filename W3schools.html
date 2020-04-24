@@ -2,9 +2,73 @@
 <html lang="en-UK">
 <head>
 <title>My First HTML</title>
+<base href="https://www.w3schools.com/images/" target="_blank">
 <meta charset="utf-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+<meta name="author" content="Tola Henry">
+<meta http-equiv="refresh" content="30">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-------------Syntax of HTML JavaScript------------------------------->
+<script>
+	
+function myFunction() {
+	document.getElementById("demo").innerHTML = "Hello JavaScript"
+}
+document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+
+</script>
+<!-----------------End of section--------------------------->
+
+<!------------Information about the syntax of CSS inline styling------------------------------->
+
+<style>
+
+#myHeader {
+	background-color: lightblue;
+	color: black;
+	padding: 40px;
+	text-align: center;
+}
+
+.cities {
+	background-color: black;
+	color: white;
+	margin: 20px;
+	padding: 20px;
+
+}
+
+span.note {
+
+	font-size: 120%;
+	color: red;
+}	
+
+.city {
+
+	background-color: tomato;
+	color: white;
+	padding: 10px;
+}
+
+.main {
+
+	text-align: center;
+}
+
+</style>
+
+<!--------------End of section------------------------------>
+
 </head>
+
+
 <body>
+
+<!-- syntax of headings, paragraphs -->
 
 <h1 style="font-size: 60px">My first heading </h1>
 <h2>This is heading 2</h2>
@@ -20,6 +84,8 @@
 <p><sub>This is subscripted text</sub></p>
 <p><sup>This is supercripted text</sup></p>
 <hr>
+
+<!---------------Syntax of paragraphs, quotes, blockquotes, pre elements,link breaks----------------------------->
 
 <p>My goal is to<q>Build a new whatever this is okay</q></p>
 
@@ -62,9 +128,17 @@ My name is my name.
 <hr>
 
 <img src="w3schools.jpg" alt="w3schools" width="104" height="142">
+
 <hr>
 
+<!-------------Syntax of buttons------------------------------->
+
 <button>Click me</button>
+
+<!-------------End of section------------------------------->
+
+
+<!--------------Syntax of unordered lists, ordered lists------------------------------>
 
 <ul>
 	
@@ -99,6 +173,8 @@ My name is my name.
 <h1 style="border:2px solid Tomato;">Hello World!</h1>
 <h1 style="border:3px solid blue;">Hello World!</h1>
 
+<!---------------syntax of inserting and adding links----------------------------->
+
 <hr>
 
 <a href="url">link text</a>
@@ -112,6 +188,10 @@ My name is my name.
 <hr>
 
 <img src="url" alt="This is just a test" style="width:20px;height:20px">
+
+<!----------------End of section---------------------------->
+
+<!---------------Syntax of inserting tables----------------------------->
 
 <hr>
 
@@ -134,6 +214,10 @@ My name is my name.
 	</tr>
 
 </table>
+
+<!--------------End of section------------------------------>
+
+<!----------------Syntax of unordered lists, ordered lists, descripted lists, nested lists, control list counting, horizontal list with CSS---------------------------->
 
 <hr>
 
@@ -215,4 +299,84 @@ My name is my name.
 	<li>Milk</li>
 </ol>
 
+<hr>
 
+<!-------------End of section------------------------------->
+
+<!------------Syntax of inline elements (like 'Span') and block elements (like 'Div')-------------------------------->
+
+<div>Hello World!</div>
+
+
+
+<span>Hello World!</span>
+
+<div style="background-color: black;color:white;padding: 20px;">
+
+	<h2>London</h2>
+	<p>London is the capital city of England</p>
+
+</div>
+
+<h1>My <span style="color:red">Important</span> Heading</h1>
+
+<div class="cities">
+	<h2>London</h2>
+	<p>London is the capital of England</p>
+</div>
+
+<div class="cities">
+	<h2>Paris</h2>
+	<p>Paris is the capital of France</p>
+</div>
+
+<div class="cities">
+	<h2>Tokyo</h2>
+	<p>Tokyo <span class="note">is</span> the capital of Japan</p>
+</div>
+
+<h2 class="city main">London</h2>
+<h2 class="city">Paris</h2>
+<h2 class="city">Tokyo</h2>
+<p class="city">Paris is the capital of France</p>
+
+<h1 id="myHeader">My Header</h1>
+
+<h2 id="C4">Chapter 4</h2>
+<a href="#C4">Jump to Chapter 4 </a>
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+
+<hr>
+
+<!---------------End of section----------------------------->
+
+<!-------------Syntax of iframe------------------------------->
+
+<iframe src="demo_iframe.htm" height="200" width="300"></iframe>
+<iframe src="demo_iframe.htm" style="height:200px;width:300px;"></iframe>
+<iframe src="demo_iframe.htm" style="border:none;"></iframe>
+<iframe src="demo_iframe.htm" style="border:2px solid red;"></iframe>
+
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</p>
+
+<hr>
+<!------------End of section-------------------------------->
+
+<!-------------Syntax of HTML JavaScript------------------------------->
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+<!-----------------End of section--------------------------->
+
+<!----------------HTML File Paths---------------------------->
+
+<img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">
+
+<img src="/images/picture.jpg" alt="Mountain">
+
+<img src="images/picture.jpg" alt="Mountain">
+
+<img src="../images/picture.jpg" alt="Mountain">
