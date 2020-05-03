@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>W3schools CSS reference and notes</title>
+</head>
+<style>
+
+* {
+	font-size: 16px; /* Univerisal, will apply to all HTML elements within the page*/
+}
+
+body {
+	background-color: #00CED1;
+	opacity: 0.9;
+	background-image: url("paper.gif"); /* Applies background image of the page */
+	background-repeat: repeat-x; /* repreat horizontally*/
+	background-repeat: no-repeat; /*does not repeat background image */
+	background-attachment: fixed; /* background image should be fixed */
+	background-attachment: scroll; /* background image should scroll with the rest of the page */
+	background: #ffffff url("img_tree.png") no-repeat right top; /*shorthand property for background properties hieharcy includes background-color, background-image, background-repeat, background-postion */
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+p {
+	font-family: verdana;
+	font-size: 20px;
+}
+
+#paragraph1 {
+	background-color: yellow;
+	text-align: center;
+}
+
+.center {
+	background-color: blue;
+	text-align: center;
+}
+
+
+h2,h3,h4 { /* Can combine multiple elements together in CSS using the coma*/
+
+	text-align: center;
+	color:red;
+}
+
+.dotted {
+	border-style: dotted;
+}
+
+.dashed {
+	border-style: dashed;
+}
+
+.solid {
+	border-style: solid;
+}
+
+.double {
+	border-style: double;
+}
+
+.groove {
+	border-style: groove;
+}
+
+.ridge {
+	border-style: ridge;
+}
+
+.inset {
+	border-style: inset;
+}
+
+.outset {
+	border-style: outset;
+}
+
+.none {
+	border-style: none;
+}
+
+.hidden {
+	border-style: hidden;
+}
+
+.mix {
+	border-style: dotted dashed solid double;
+}
+
+.one {
+	border-style: solid;
+	border-width: 5px 20px;	
+} /* 5px top and bottom, 20px on the sides */
+
+.two {
+	border-style: solid;
+	border-width: medium;
+}
+
+.three {
+	border-style: dotted;
+	border-width: 2px;
+}
+
+.four {
+	border-style: dotted;
+	border-width: thick;
+}
+
+.red_border {
+	border-style: solid;
+	border-color: red;
+}
+
+.green_border {
+	border-style: solid;
+	border-color: green;
+}
+
+.blue_border {
+	border-style: dotted;
+	border-color: blue;
+}
+
+.mix_border {
+	border-style: solid;
+	border-color: red green blue yellow; /*red top, green right, blue bottom and yellow left */
+}
+
+.border_individual_sides  {
+	border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: :solid;
+	border-left-style: solid;
+}
+
+.shorthand_Property { /* shorthand property goes like this border-width, border-style, border-color */
+	border-left: 5px solid red;
+	background-color: lightgrey;
+}
+
+.shorthand_Property_bottom {
+	border-bottom: 6px solid red;
+	background-color: lightgrey;
+}
+
+.normal_border {
+	border: 2px solid red;
+	border-radius: 0px;
+}
+
+.round_border {
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+.rounder_border {
+	border: 2px solid red;
+	border-radius: 10px;
+}
+
+.roundest_border {
+	border: 2px solid red;
+	border-radius: 15px;
+}
+
+div {
+	border: 1px solid black;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-right: 150px;
+	margin-left: 89px;
+	background-color: lightblue;
+}
+
+.short_margin {
+	border: 1px solid black;
+	margin: 100px 150px 100px 89px;
+	background-color: lightblue;
+}
+
+.auto_margin {
+	width: 300px;
+	margin: auto;
+	border: 1px solid red;
+}
+
+.padding_div {
+	border: 1 px solid black;
+	background-color: lightblue;
+	padding-top: 50px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+	padding-left: 80px;
+}
+
+.short_padding_div {
+	border: 1 px solid black;
+	background-color: lightblue;
+	padding-top: 50px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+	padding-left: 80px;
+}
+
+.border_box {
+	width: 300px;
+	padding: 25px;
+	box-sizing: border-box;
+	background-color: lightblue;
+}
+
+.width_height_div {
+	height: 200px;
+	width: 50%;
+	background-color: powderblue;
+}
+
+.max_width_div {
+	max-width: 500px;
+	height: 100px;
+	background-color: powderblue;
+}
+
+.box_model_div {
+	background-color: lightgrey;
+	width: 300px;
+	border: 15px solid green;
+	padding: 50px;
+	margin: 20px;
+}
+
+p {
+	outline-color:red;
+}
+
+p.dotted 
+{
+	outline-style: dotted;
+}
+p.dashed {
+	outline-style: dashed;
+}
+p.solid 
+{
+	outline-style: solid;
+}
+p.double 
+{
+	outline-style: double;
+}
+p.groove 
+{
+	outline-style: groove;
+}
+p.ridge 
+{
+	outline-style: ridge;
+}
+p.inset 
+{
+	outline-style: inset;
+}
+p.outset 
+{
+	outline-style: outset;
+}
+
+.thin_outline {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thin;
+}
+
+.medium_outline {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: medium;
+}
+
+.thick_outline {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thick;
+}
+
+.px_thick_outline {
+	border: 1px solid black;
+	outline-style: solid;
+	outline-color: red;
+	outline-width: 4px;
+}
+
+.outline_color_1 {
+	border: 2px solid black;
+	outline-style: solid;
+	outline-color: red;
+}
+
+.outline_color_2 {
+	border: 2px solid black;
+	outline-style: dotted;
+	outline-color: blue;
+}
+
+.outline_color_3 {
+	border: 2px solid black;
+	outline-style: outset;
+	outline-color: grey;
+} 
+
+.outline_invert {
+	border: 1px solid yellow;
+	outline-style: solid;
+	outline-color: invert;
+}
+
+.outline_1 {
+	outline: dashed;
+}
+
+.outline_2 {
+	outline: dotted red;
+}
+
+.outline_3 {
+	outline: 5px solid yellow;
+}
+
+.outline_4 {
+	outline: thick ridge pink;
+}
+
+.outline_offset {
+	margin: 30px;
+	border: 1px solid black;
+	outline: 1px solid red;
+	outline-offset: 15px;
+}
+
+.text_formatting_div {
+	border: 1px solid gray;
+	padding: 8px;
+	background-color:white;
+}
+
+.text_formatting_h1 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #4CAF50;
+	font-size: 35px;
+
+}
+
+.text_formatting_p {
+	text-indent: 50px;
+	text-align: justify;
+	letter-spacing: 3px;
+}
+
+a {
+	text-decoration: none;
+	color: #008CBA;
+}
+
+</style>
+
+<body>
+
+<h1>My First CSS example</h1>
+<p>This is a paragraph</p>
+<p id="paragraph1">This is a id paragraph example</p>
+<p class="center ">This paragraph refers to tow classes</p>
+<h2>Example!</h2>
+<h3>Example!</h3>
+<h4>Example!</h4>
+<hr>
+
+<p class="dotted">Example of border styles!</p>
+<p class="dashed">Example of border styles!</p>
+<p class="solid">Example of border styles!</p>
+<p class="double">Example of border styles!</p>
+<p class="groove">Example of border styles!</p>
+<p class="ridge">Example of border styles!</p>
+<p class="inset">Example of border styles!</p>
+<p class="outset">Example of border styles!</p>
+<p class="none">Example of border styles!</p>
+<p class="hidden">Example of border styles!</p>
+<p class="mix">Example of border styles!</p>
+
+<hr>
+
+<p class="one">Example of CSS Border Width</p>
+<p class="two">Example of CSS Border Width</p>
+<p class="three">Example of CSS Border Width</p>
+<p class="four">Example of CSS Border Width</p>
+
+<hr>
+
+<p class="red_border">Example of CSS Border Color</p>
+<p class="green_border">Example of CSS Border Color</p>
+<p class="blue_border">Example of CSS Border Color</p>
+<p class="mix_border">Example of CSS Border Color</p>
+
+
+<hr>
+
+<p class="border_individual_sides">Example of CSS-Border individual sides</p>
+
+<hr>
+
+<p class="shorthand_Property">Example of shorthand property!</p>
+<p class="shorthand_Property_bottom">Example of shorthand property!</p>
+
+<hr>
+
+<p class="normal_border">Example of Normal Border!</p>
+<p class="round_border">Example of Normal Border!</p>
+<p class="rounder_border">Example of Normal Border!</p>
+<p class="roundest_border">Example of Normal Border!</p>
+
+<hr>
+
+<div>An example of how to use the margin function in CSS. As you can see it works here fine! The div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+
+<div class="short_margin">the margin can be shortened as well without using the top,bottom right and left margin CSS versions. You can just you margin to make it simplier and easier. Like this for example.</div>
+
+<div class="auto_margin">This div will be horizontally centered because it has the margin set to auto.</div>
+
+<hr>
+
+<div class="padding_div">The div element has a top paddding of 50px, a right padding of 30px, a bottom padding of 50px, and a left padding of 80px.</div>
+
+<div class="short_padding_div">The div element has a top paddding of 50px, a right padding of 30px, a bottom padding of 50px, and a left padding of 80px.</div>
+
+<div class="border_box">The width of this div remains at 300px, in spite of the 50px of total left and right padding, because o the box sizing: border-box property.</div>
+
+<hr>
+
+<p>This div element has a height of 200px and a width of 50%</p>
+<div class="width_height_div"></div>
+
+<div class="max_width_div">This div element has a height of 100px and a max-width of 500px</div>
+
+<hr>
+
+<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+
+<div class="box_model_div">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+<hr>
+
+<p>Outlines examples</p>
+
+<p class="dotted">A dotted outline</p>
+<p class="dashed">A dashed outline</p>
+<p class="solid">A solid outline</p>
+<p class="double">A double outline</p>
+<p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+<p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+<p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+<p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+
+<p class="thin_width">Thin outline</p>
+<p class="medium_outline"> Medium outline</p>
+<p class="thick_outline"> Thick outline</p>
+<p class="px_thick_outline">4px thick outline</p>
+<p class="outline_color_1">solid red outline</p>
+<p class="outline_color_2">dotted blue outline</p>
+<p class="outline_color_3">grey outline</p>
+<p class="outline_invert">invert example</p>
+<p class="outline_1">dashed outline</p>
+<p class="outline_2">dotted red outline</p>
+<p class="outline_3">5px solid yellow outline</p>
+<p class="outline_4">thick ridge pink outline</p>
+<p class="outline_offset">outline offset example! This paragraph has an outline 15px outside the border edge.</p>
+
+<hr>
+
+<div class="text_formatting_div">
+<h1 class="text_formatting_h1">text formatting</h1>
+<p class="text_formatting_p">This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
+  The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from this colored
+  <a target="_blank" href="tryit.asp?filename=trycss_text">"Try it Yourself"</a> link.</p>
+</div>
+
+<h1 id="practise">Just testing</h1>
+
+</div>
+</body>
+</html>
