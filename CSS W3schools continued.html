@@ -5,7 +5,7 @@
 <style>
 
 body {
-	background-color: lightgrey;
+	
 	color: black; 
 	opacity: 3.1;
 }
@@ -195,16 +195,25 @@ ol.d {
   list-style-type: lower-alpha;
 }
 
-table, th, td {
+table {
   border: 1px solid black;
-
+  width: 100%; */Adjusts the width of the table/*  
 }
 
-#single_border {
+th, td {
+  vertical-align: bottom; */Sets the vertical alignment (like top, bottom, or middle) of the content/*
   border-collapse: collapse;
+  padding: 4px;
+  border-bottom: 1px solid #ddd; */Add the border-bottom property to th and td for horizontal dividers/*  
 }
 
+tr: nth-child(even) 
+  background-color: #f2f2f2;
+}
 
+li {
+  display: inline;
+}
 
 </style>
 </head>
@@ -303,37 +312,46 @@ add background colors to list and list items -->
 
 <h2>CSS Tables</h2>
 <h3>Table Borders</h3>
-<!--Example of CSS border-->
 <table>
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Points</th>
   </tr>
   <tr>
     <td>Peter</td>
     <td>Griffin</td>
+    <td>$100</td>
   </tr>
   <tr>
     <td>Lois</td>
     <td>Griffin</td>
+    <td>$150</td>
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>Swanson</td>
+    <td>$300</td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
   </tr>
 </table>
 
-<h3>Single border around the table</h3>
-<table id="single_border">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-  </tr>
-</table>
+<hr>
+
+<h2>CSS Layout - The display property</h2>
+
+<h3>Override the default display value</h3>
+<p>Displaying a list of links as a horizontal menu</p>
+<ul>
+  <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+  <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+  <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+</ul>
+
 
 </body>
 </html>
