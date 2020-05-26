@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>w3schools CSS Forms</title>
+<style>
+/*Example of using CSS to style a simple HTML Form provided by w3schools*/
+input[type=text], select {
+  width: 97%;
+  padding: 12px 20px;
+  margin: 8px 5px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<h3>Using CSS to style an HTML Form example from w3schools</h3>
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name">
+    
+    <label for="lname">Last name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+    <input type="submit" value="Submit form">
+  </form>
+</div>
+
+
+</body>
+</html>

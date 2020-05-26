@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Attribute Selectors</title>
+<style>
+a[target] {
+  background-color: yellow;
+}
+
+[class|=top] {
+  background: yellow;
+}
+
+input[type="text"] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+input[type="button"] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<p>The attribute selector is used to select elements with a specified attribute.</p>
+
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+<h1 class="top-header">Welcome</h1>
+<p class="top-text">Hello world!</p>
+<p class="topcontent">Are you learning CSS?</p>
+
+<form name="input" action="" method="get">
+  Firstname:<input type="text" name="Name" value="Peter" size"20">
+  Lastname:<input type="text" name="Name" value="Griffin" size="20">
+  <input type="button" value="Example Button">
+</form>
+
+
+</body>
+</html>
