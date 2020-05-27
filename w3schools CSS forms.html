@@ -4,24 +4,29 @@
 	<title>w3schools CSS Forms</title>
 <style>
 /*Example of using CSS to style a simple HTML Form provided by w3schools*/
-input[type=text], select {
+input[type=text]/*This will only select text fields from the forms*/ , select {
   width: 97%;
   padding: 12px 20px;
   margin: 8px 5px;
   display: block;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  
+  border-radius: 4px;  
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
+input[type=text]:focus /*Focus selector allows you to configure the behaviour of inputs*/ {
+  border: 3px solid #555;
+  outline: none; /*outline: none removes the blue outline around the input*/	
+}
+
+input[type=submit]{
+  width: 100%; /*The width property determines the width of the input field*/
+  background-color: #4CAF50;/*Use the background-color property to add a background color to the input*/
+  color: white;/*Color property changes the text color*/
+  padding: 14px 20px; /*Using padding would add space inside the text field. Add some margin to add some space putside of them*/
   margin: 8px 0;
-  border: none;
-  border-radius: 4px;
+  border: none; /*Border property changes the border size and color*/
+                /*If wanting a bottom border use the 'border-bottom property*/
+  border-radius: 4px;/*Border-radius property to add rounded corners*/
   cursor: pointer;
 }
 
