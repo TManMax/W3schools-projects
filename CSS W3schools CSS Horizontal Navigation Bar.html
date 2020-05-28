@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Horizontal Navigation Bar</title>
+<style>
+/*Making navigation bar using the inline method8*/
+/*By deefault <li> elements are block elements. In this example we remove the link breaks before and after each list
+item, to display them on one line*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+/*In this example we are using the float method to create a horizontal navigation bar*/
+/*Overflow: hidden is addd to the ul element to prevent li elements from going outside of the list*/
+/*float: left; - used to get block elements to slide next to each other*/
+/*display: block; - Displaying the links as block elements makes the whole link area clickable not just the text.
+allows us to specify the padding and height, width, margins, etc if wanted*/
+/*padding: 8px; - Block elements take up the full width that is avaliable this means that they cannot float next to
+each other, therefore specifying some padding to make them look good*/
+/*background-color; adding a background color for each of the element*/ 
+#ul_float {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.li_float {
+  float: left;
+}
+
+.li_float a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#example">Example</a></li>
+  <li><a href="#example">Example</a></li>
+  <li><a href="#example">Example</a></li>
+  <li><a href="#example">Example</a></li>
+</ul>
+
+<ul id="ul_float">
+  <li class="li_float"><a href="#example">Example</a></li>
+  <li class="li_float"><a href="#example">Example</a></li>
+  <li class="li_float"><a href="#example">Example</a></li>
+  <li class="li_float"><a href="#example">Example</a></li>
+</ul>
+
+
+</body>
+</html>

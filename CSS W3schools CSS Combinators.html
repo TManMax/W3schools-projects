@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Combinators</title>
+<style>
+/*Descendant selector, selects all elements that are descendants or a specified element.*/
+/*Example below of descendant below, selects all <p> elements inside <div> elements*/
+div p { 
+  background-color: yellow;
+}
+
+/*The child selector selects all elements that are the children of a a specified element*/
+/*The example below of a child selector below is all <p> elements that are children of a <div> element*/
+#div_1 > p {
+  background-color: orange;
+}
+
+/*Adjacent sibling selector selects all elements that are the adjacent siblings of a specified element*/
+/*Sibling elements must have the same parent element, and "adjacent" means "immediately following"*/
+/*The following example below shows all <p> elements that are placed immediately after <div> elements*/
+#div_2 + p {
+  background-color: lightblue;
+}
+
+/*General sibling selector selects all elements that are siblings of a specified element*/
+/*Following example selects all <p> elements that are siblings of <div> elements*/
+#div_3 ~ p {
+  background-color: lightgreen;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+<div id="div_1">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section> <!-- not Child but Descendant -->
+  <p>Paragraph 4 in the div.</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+
+<div id="div_2">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</div>
+
+<p>Paragraph 3. Not in a div.</p>
+<p>Paragraph 4. Not in a div.</p>
+
+<p>Paragraph 1.</p>
+
+<div id="div_3">
+  <p>Paragraph 2.</p>
+</div>
+
+<p>Paragraph 3.</p>
+<code>Some code.</code>
+<p>Paragraph 4.</p>
+
+
+
+
+</body>
+</html>

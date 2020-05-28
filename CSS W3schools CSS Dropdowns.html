@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Dropdowns</title>
+<style>
+/*Use any element to open the dropdown content like <span> or <button> element*/
+/*Use a container element like <div> to create the dropdown content. You can then add whatever you want inside it*/
+/*Make sure to wrap the <div> element around the elements to position the dropdwon content correctly with CSS*/
+/*The .dropdown class uses the position: relative, this is needed when wanting the dropdown content to be placed right
+below the dropdown button using position: absolute*/
+/*In this example, the .dropdown-content class holds the actual dropdown content. It is hidden by default and will be displayed
+on hover.*/ 
+/*The min-width is set to 160px. if wanting the width of the dropdown content to be as wide as the dropdown button
+set the width to 100% and overflow: auto to enable scroll on small screens*/
+/*Use in CSS the property box-shadow: to make the dropdown menu look like a card*/
+/*The :hover selector is used to show the dropdown menu when the user moves the mouse over the dropdown button*/
+
+.drop_button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown_content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .drop_button {
+  background-color: yellow;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Hoverable Dropdown</h2>
+<p>Dropdown menu</p>
+
+<div class="dropdown">
+  <button class="drop_button">Dropdown</button>
+  <div class="dropdown_content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+
+</body>
+</html>

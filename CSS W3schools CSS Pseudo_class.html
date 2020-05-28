@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Pseudo-classes</title>
+<style>
+/*'hover' must come after 'link' and 'visited' to be effective*/
+/*'active' must come after 'hover' to be effective*/
+/*Pesudo-class names are not case-sensitive*/
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/*Pseudo-classes can be combined with CSS classes/*
+/*When hovering over the link in the example, it will change color*/
+a.highlight:hover {
+  color: #ff0000;
+}
+
+/*Example of using the 'hover' pseudo-class on a <div> element*/
+div {
+  background-color: green;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+#div_3:hover {
+  background-color: blue;
+}
+
+#p_1 {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+#div_4:hover #p_1 {
+  display: block;
+  color: white;
+}
+
+.p1:first-child {
+  color: blue;
+}
+</style>
+
+</head>
+<body>
+
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+<p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+<p><a href="default.asp">CSS Tutorial</a></p>
+
+<p>Mouse over the div element below to change its background color:</p>
+
+<div id="div_3">Mouse Over Me</div>
+
+<div id="div_4">Hover over me to show the p element
+  <p id="p_1">Tada! Here I am!</p>
+</div>
+
+<p class="p1">This is some text.</p>
+<p class="p1">This is some text.</p>
+<p class="p1"><b>Note:</b> For :first-child to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+
+
+</body>
+</html>

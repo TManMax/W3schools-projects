@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Navigation Bar</title>
+<style>
+/*In this example of CSS, it removes the bullet points from the list and its default padding and marign*/
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;/*Removes bullet points*/
+  margin: 0;/*Removes browser default settings*/
+  padding: 0;/*Removes browser default settings*/
+}
+
+#ul_1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block; /*Displays the links as block elements making the whole link area clickable (not just the text)
+  allows to specify the width, padding, margin, height, etc.*/
+  /*Block elements take up the full width available by default, in this example we specify a 60 pixel width*/
+  width: 60px;
+  background-color: #dddddd;
+}
+
+#ul_2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+/*Example of a basic vertical navigation bar with a gray background color and change the background color of the links
+when the user moves the mouse over them*/
+#li_1 a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+}
+
+#li_1 a:active {
+  background-color:  #4CAF50;
+  color: white;
+}
+
+#li_1 a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<p>Note: We use href='#' for test links. In a real web site this would be URLs.</p>
+
+<ul id="ul_1">
+  <li><a href="#example">Example</a></li>
+  <li><a href="#example">Example</a></li>
+  <li><a href="#example">Example</a></li>
+  <li><a href="#example">Example</a></li>
+</ul>
+
+<h2>Vertical Navigation Bar</h2>
+
+<ul id="ul_2">
+  <li id="li_1"><a class =="active" href="#example">Example</a></li>
+  <li id="li_1"><a href="#example">Example</a></li>
+  <li id="li_1"><a href="#example">Example</a></li>
+  <li id="li_1"><a href="#example">Example</a></li>
+</ul>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Pseudo-elements</title>
+<style>
+/*Can only be applied to block level elements*/
+#p1::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+
+/*Can only be applied to block-level elements*/
+#p2::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+/*Pseudo-elements can be combined with CSS classes*/
+p.intro::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+}
+/*Serveral pseudo-elements can also be combined*/
+#p3::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+#p3::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+/*Pseudo-element can be used to insert some content before the content of an element. Use 'after to get the opposite effect*/
+h1::before {
+  content: url(smiley.gif);
+}
+
+</style>
+</head>
+<body>
+<p id="p1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+<p id="p2">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+
+<p class="intro">This is an introduction.</p>
+<p>This is a paragraph with some text. A bit more text even.</p>
+
+<p id="p3">You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first letter and the first line of a text!</p>
+
+<h1>This is a heading</h1>
+<p>The ::before pseudo-element inserts content before the content of an element.</p>
+
+<h1>This is a heading</h1>
+<p><b>Note:</b> IE8 supports the content property only if a !DOCTYPE is specified.</p>
+
+
+
+</body>
+</html>
