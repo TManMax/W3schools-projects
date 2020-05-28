@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>W3schools Basic Dropdown</title>
+</head>
+<style>
+.dropdown {
+  position: relative; /*We use position relative when we want the dropdown content to be place right below the dropdown button using position:absolute*/
+  display: inline-block;
+}
+
+.dropdown-content {/*Dropwdown class holds the actual dropdown content, hidden by defauly and will be displayed on hover*/
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;/*Can be changed if needed. If wanting the width of the dropdown content to be as wide as the dropdown button set the width to 100%
+  and use 'overflow: auto' to enable scroll on small screens*/
+  box-shadow: 0px 8px 16px 0px; rgba(0,0,0,0.2);*/Using 'box-shadow' makes the dropdown menu look like a 'card'*/
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {/*Hover is used to show the dropdown menu when the user moves the mouse over the dropdown button*/
+  display: block;
+}
+/*Example CSS text for dropdown menu 2*/
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown_2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content_2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;  
+}
+
+.dropdown-content_2 a {
+  text-decoration: none;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content_2 a:hover {
+  background-color: #f1f1f1;
+  text-decoration: none;
+}
+.dropdown_2:hover .dropdown-content_2 {
+  display: block;
+}
+
+.dropdown_2:hover .dropbtn {
+  background-color: #3e8e41;
+}
+/*End of example 2 dropdown*/
+
+/*Dropdown image example*/
+.dropdown_image {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content_image {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+  z-index: 1;
+}
+
+.dropdown_image:hover .dropdown-content_image {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+/*End of dropdown image example*/
+}
+</style>
+<body>
+<h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the text below to open the dropdown content.</p>
+
+<div class="dropdown">
+  <span>Mouse over me</span> <!--Use an element to open the dropdown content in example we use <span>-->
+  <div class="dropdown-content"><!--Use a container element like <div> to create the dropdown content and add whatever needed inside of it-->
+  <p>Hello World!</p>
+  </div>
+</div><!--Wrap the <div> element around the elements to position the dropdown content correctly with CSS-->
+
+<hr>
+
+<h2>Dropdown Menu 2</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown_2">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content_2">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+
+<hr>
+
+<h2>Dropdown image</h2>
+<p>Move the mouse over the imae below to open the dropdown content.</p>
+
+<div class="dropdown_image">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="100" height="50">
+    <div class="dropdown-content_image">
+      <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200">
+        <div class="desc">Beautiful Cinque Terre</div>
+        </div>
+    </div>
+</div>
