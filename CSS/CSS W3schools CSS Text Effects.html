@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Text Effects</title>
+<style>
+/*text-align-last - Specifies how to align the last line of a text*/
+/*text-justify - Specifies how justified text should be aligned and spaced*/
+/*text-overflow - Specifies how overflowed content that is not displayed should be signaled to the user*/
+/*word-break - Specifies line breaking rules for non-CJK scripts*/
+/*word-wrap - Allows long words to be able to be broke and wrap onto the next line*/
+/*writing-mode - Specifies whether lines of text are laid out horizontally or vertically*/
+
+p.test1 { /*Example of text overflow clipping*/
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+p.test2 { /*Example of text overflow using ellipsis*/
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+p.test {
+  width: 11em;
+  border: 1px solid black;
+  word-wrap: break-word; /*Using this property will break and wrap the text to the next line*/
+}
+
+</style>
+
+</head>
+<body>
+<h1>Text overflow property</h1>
+
+<h2>Text-overflow clipping example</h2>
+<p class="test1">The following paragraphs contains a long text that will not fit in the box.</p>
+
+<h2>Text-overflow ellipsis example</h2>
+<p class="test2">This is some long text that will not fit in the box</p>
+
+<h2>The word-wrap property</h2>
+
+<p class="test">This paragraph contains a very long word: thisisaveryveryveryveryveryveryverylong word. The long word will
+break and wrap to the next line</p>
+</body>
+</html>

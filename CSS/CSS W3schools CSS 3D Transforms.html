@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 3D Transforms</title>
+<style>
+/*transform - Applies a 2D or 3D transformation to an element*/
+/*transform-origin - Allows to change the position on transformed elements*/
+/*transform-style - Specifies how nested elements are rendered in 3D space*/
+/*perspective -  Specifies the perspective on how 3D elements are views*/
+/*perspective-origin - Specifies the bottom position of 3D elements*/
+/*backface-visibility - Defines whether or not an element should be visible when not facing the screen*/
+#rotate_X {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  transform: rotateX(150deg);
+}
+
+#rotate_Y {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  transform: rotateY(150deg);
+}
+
+#rotate_Z {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  transform: rotateZ(150deg);
+}
+
+</style>
+</head>
+<body>
+
+<div id="rotate_X">3D Transform example</div>
+<div id="rotate_Y">3D Transform example</div>
+<div id="rotate_Z">3D Transform example</div>
+</body>
+</html>
