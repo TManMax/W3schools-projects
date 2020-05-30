@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Tooltip</title>
+<style>
+/*tooltiptext class holds the acutal tooltip text. It is hidden by default and will be visible on hover*/
+/*The CSS border-radius property is ued to add rounded corners to the tooltip text*/
+/*The :hover selector is used to show the tooltip text when the user moves the mouse over the <div> with class="tooltip"*/
+body {
+  text-align: center;
+}
+
+.tooltip {
+  position: relative; /* Position: relative needed to position the tooltip text*/
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;  
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute; 
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip2 .tooltiptext2 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px; /* The top:-5px is used to place it in the middle of its container element. We use the number 5 because the tooltip
+  text has a top and bottom padding of 5px. If you increase its padding also increase the value of the top property*/ 
+  left: 105%; /*Tooltip placed to the right (left:105%) of the hoverable text (<div>)*/
+}
+
+.tooltip2:hover .tooltiptext2 {
+  visibility: visible;
+}
+
+.tooltip3 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip3 .tooltiptext3 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+
+/*Positioning the tooltip*/
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip3:hover .tooltiptext3 {
+  visibility: visible;
+}
+
+.tooltip4 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip4 .tooltiptext4 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+
+/*Positioning the tooltip to the top*/
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -25%;
+}
+
+.tooltip4:hover .tooltiptext4 {
+  visibility: visible;
+}
+
+.tooltip5 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip5 .tooltiptext5 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip5:hover .tooltiptext5 {
+  visibility: visible;
+}
+
+</style>
+</head>
+<body>
+
+<h1>CSS Tooltip examples provided by w3schools</h1>
+<p>Example of a tool tip below</p>
+<div class="tooltip">Hover hear please to see example
+  <span class="tooltiptext">Tooltip text here</span> <!--The tooltip text is placed inside an inline element such as <span>-->
+</div>
+
+<h1>Right Tooltip</h1>
+<div class="tooltip2">Hover hear please to see example
+  <span class="tooltiptext2">Tooltip text here</span>
+</div>
+
+<h1>Left Tooltip</h1>
+<div class="tooltip3">Hover hear please to see example
+  <span class="tooltiptext3">Tooltip text here</span>
+</div>
+
+<h1>Top Tooltip</h1>
+<div class="tooltip4">Hover hear please to see example
+  <span class="tooltiptext4">Tooltip text here</span>
+</div>
+
+<h1>Bottom Tooltip</h1>
+<div class="tooltip5">Hover hear please to see example
+  <span class="tooltiptext5">Tooltip text here</span>
+</div>
+
+</body>
+</html>

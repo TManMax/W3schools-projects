@@ -14,14 +14,20 @@
   . reverse - The animation is played in reverse direction (backwards)
   . alternate - The animation is played forwards first, then backwards
   . alternate-reverse - The animation is played backwards first, then forwards
-. animation-timing-function (Can have different values includign):
+. animation-timing-function (Can have different values including):
   . ease - Specifies an animation with a slow start, then fast, then end slowly
   . linear - Specifies an animation with the same speed from start to end
   . ease-in - Specifies an animation with a slow start
   . ease-out - Specifies an animation with a slow end
   . ease-in-out - Specifies an animation with a slow start and end
   . cubic-bezier(n,n,n,n) - Lets you define your own values in a cubic-bezier function
-. animation-fill-mode
+. animation-fill-mode (Has different properties):
+  . animation-fill-mode: both; - Lets the element get the style values set by the first keyframe before the animation starts,
+  and retains the style values from the last keyframe when the animation ends.
+  . animation-fill-mode: backwards; - The div element gets the style values set by the first keyframe before the animation starts
+  (during the animation-delay period)
+  animation-fill-mode: fowards; - Will retain the style value from the last keyframe when the animation ends. 
+  In this case it will remain pink.    
 . animation
 */
 
@@ -31,6 +37,8 @@
   background-color: red;
   animation-name: example;
   animation-duration: 4s; /*Defines how long an animation should take to complete MUST BE SPECIFIED*/
+  animation-fill-mode: backwards; /*The div element gets the style values set by the first keyframe before the animation starts
+  (during the animation-delay period*/
 }
 
 @keyframes example { 
@@ -49,6 +57,8 @@ to {
   background-color: red;
   animation-name: example2;
   animation-duration: 4s;
+  animation-fill-mode: forwards; /*Will retain the style value from the last keyframe when the animation ends. 
+  In this case it will remain pink*/
 }
 
 @keyframes example2 {
@@ -121,7 +131,44 @@ to {
 }
 }
 
+.div_4, .div_5, .div_6, .div_7, .div_8 {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  position: relative;  
+  background-color: red;
+  animation-timing-function: ease;
+  animation: multi_example 10s infinite;
+}
 
+.div_4 {
+  animation-timing-function: linear;
+}
+
+.div_5 {
+  animation-timing-function: ease;
+}
+
+.div_6 {
+  animation-timing-function: ease-in;
+}
+
+.div_7 {
+  animation-timing-function: ease-out;
+}
+
+.div_8 {
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes multi_example {
+from {
+  left: 0px;
+}
+to {
+  left: 300px;
+}
+}
 
 </style>
 </head>
@@ -131,6 +178,10 @@ to {
 <div id="div_2"></div><br>
 <div id="div_3"></div><br>
 <div class="div_4">linear</div><br>
+<div class="div_5">ease</div><br>
+<div class="div_6">ease-in</div><br>
+<div class="div_7">ease-out</div><br>
+<div class="div_8">ease-in-out</div><br>
 
 
 
