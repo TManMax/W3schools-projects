@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Variables</title>
+<style>
+/*Variables in CSS should be declared within a CSS selector that defines its scope. For global scope use either :root or body selector
+The Variable name must begin with two dashes (--) and it is also case sensitive
+The syntax of the var() function is like this:
+'var(customer-name,value)'
+custome-name - Required. The custom property's name(must start with two dashes)
+value - Optional. The fallback value(Used if the property is invalid)
+*/
+
+:root {
+  --main-bg-color: coral;
+  --second-bg-color: green;
+  --main-txt-color: white;
+}
+
+#div1 {
+  background-color: var(--main-bg-color);
+  padding: 5px;
+  color: var(--main-txt-color);
+}
+
+#div2 {
+  background-color: var(--second-bg-color);
+  padding: 5px;
+}
+
+#div3 {
+  background-color: var(--main-bg-color);
+  padding: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>The var() Function</h1>
+
+<div id="div1"> This is an example text for the var() function in CSS</div><br>
+
+<div id="div2"> This is an example text for the var() function in CSS</div><br>
+
+<div id="div3"> This is an example text for the var() function in CSS</div><br>
+
+
+</body>
+</html>

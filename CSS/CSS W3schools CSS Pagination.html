@@ -1,38 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CSS Pagination Examples</title>
+	<title>CSS Pagination</title>
 <style>
-.div_pagination a {
+/*div pagination_container for pagination content default values*/
+body {
+  text-align: center;
+}
+
+.pagination_container {
+  display: inline-block;
+}
+
+.pagination_container a {
   color: black;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
 }
+/*end of div pagination_container*/
 
-.div_pagination a:hover {
-  background-color: orange;  
-  color: white;
-  opacity: 0.6;
+/*.pagination_2 example*/
+.pagination_2 a {
+  color: purple;
 }
 
+.pagination_2 a.active {
+  background: #4CAF50;
+  color: white;
+  border-radius: 6px;
+}
 
+.pagination_2 a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 6px;
+}
+
+/*End of .pagination_2 example*/
+
+.pagination_3 a {
+  border: 1px solid #ddd;
+  transition: background-color .3s;
+  margin: 0 4px; /*0 is for the top and bottom 4px is for the right and left, this is the shorthand version of the margin property*/
+}
+
+.pagination_3 a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50; 
+}
+
+.pagination_3 a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination_3 a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination_3 a:last-child {
+ border-top-left-radius: 5px;
+ border-bottom-left-radius: 5px;
+}
 </style>
 </head>
 <body>
-<div class="div_pagination">
-  <h2>Simple Pagination</h2>
-    <a href="#">&laquo;</a>
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
-    <a href="#">&raquo;</a>
+<div class="pagination_container">
+  <div class="pagination_1">
+    <h2>Simple Pagination</h2>
+      <a href="#">&laquo</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">&raquo</a>
+  </div><br>
+  <div class="pagination_2">
+    <h2>Active and Hoverable Pagination</h2>
+      <a href="#">&laquo</a>
+      <a href="#">1</a>
+      <a class="active" href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">&raquo</a>
+  </div><br>
+  <div class="pagination_3">
+    <h2>Transition Effect on Hover</h2>
+      <a href="#">&laquo</a>
+      <a href="#">1</a>
+      <a class="active" href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">&raquo</a>
+  </div>
 </div>
-
-
-
 </body>
 </html>
