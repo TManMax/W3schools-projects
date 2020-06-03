@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Where to</title>
+<script>
+function myFunction() {
+  document.getElementById("demo_head").innerHTML = "The Paragraph has been changed.";
+}
+</script>
+</head>
+<body>
+
+<p id="demo"></p>
+<!--In HTML, JavaScript is inserted between the <script> and </script> tags-->
+<!--Old JavaScript examples may use a type attribute: <script type="text/javascript">
+The type attribute is not required. JavaScript is the default scripting language in HTML-->
+
+<h2>JavaScript in the 'head' tags example</h2>
+<p id="demo_head">A paragraph</p>
+<button type="button" onclick="myFunction()">Try it okay!</button>
+
+<h2>JavaScript inside the body tag example 2</h2>
+<!--Placing Javascript 'scripts' at the bottom of the <body> element improves the display speed because script interpretation slows down the display-->
+<p id="demo_body">A body paragraph</p>
+<button type="button" onclick="myFunction2()">Try it please!</button>
+
+<script>
+function myFunction2() {
+  document.getElementById("demo_body").innerHTML = "Paragraph has been changed successfully!";
+}
+</script>
+
+
+</body>
+</html>

@@ -5,43 +5,17 @@
 </head>
 <body>
 
-<h2>My First JavaScript</h2>
-
-<button type="button"
-onclick="document.getElementById('demo1').innerHTML =
-Date()">Click me to display the date and time thank you</button>
-
-<p id="demo1"></p>
-
-<What Can JavaScript Do?</h2>
-
+<h2>JavaScript introduction</h2>
+<p>In this example using 'getElementById()' we are able to change the "demo" id to "Hello JavaScript!"</p> <!--JavaScript supports both double and single quotes-->
 <p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
 
-<button type="button"
-onclick='document.getElementById("demo").innerHTML =
-"Hello JavaScript"'>Click Me!</button>
+<h3>JavaScript can change HTML styles(CSS)</h3>
+<p id="demo_css">JavaScript can change the style of an HTML element.</p>
+<button type="button" onclick="document.getElementById('demo_css').style.fontSize='35px'">Click me for effect!</button>
 
-<h2>Changing the style of a HTML element using JavaScript</h2>
+<h3>JavaScript can show HTML elements</h3>
+<p>JavaScript can show hidden HTML elements that can be done by changing the <strong>display</strong> style.</p>
+<p id="demo_html" style="display:none">It worked!</p>
+<button type="button" onclick="document.getElementById('demo_html').style.display='block'">Click me please</button>
 
-<p id="demo3">JavaScript can change the style of an HTML element.</p>
-
-<button type="button"
-onclick="document.getElementById('demo3').style.fontSize='35px'">Click Me please!</button>
-
-<h2>Hiding HTML elements using JavaScript</h2>
-
-<p id="demo4">JavaScript can hide HTML elements.</p>
-
-<button type="button"
-onclick="document.getElementById('demo4').style.display='none'">Click Me now please!</button>
-</body>
-</html>
-
-<h2>Showing hidden HTML elements using JavaScript</h2>
-
-<p>JavaScript can show hidden HTML elements.</p>
-
-<p id="demo5" style="display:none">Hello JavaScript!</p>
-
-<button type="button"
-onclick="document.getElementById('demo5').style.display='block'">Click me now please again!</button>

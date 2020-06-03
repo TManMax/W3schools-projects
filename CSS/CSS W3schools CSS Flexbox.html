@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Flexbox</title>
+<style>
+/*
+flex container properties includes:
+. flex-direction - Defines which direction the container wants to stack the flex items.
+    . flex-direction: column - Stacks the flex items vertically meaning from top to bottom.
+    . flex-direction: column-reverse - Stacks the flex items vertically bottom to top.
+    . flex-direction: row - Stacks the flex items horizontally from left to right.
+    . flex-direction: row-reverse - Stacks the flex items horizontally from right to left.
+. flex-wrap - Specifies whether the flex items should wrap or not.
+    . flex-wrap: nowrap - Specifies that the flex items will not wrap.
+    . flex-wrap: wrap-reverse - Specifies that the flexible items will wrap if necessary in reverse order.
+. flex-flow - Shorthand property for setting both the flex-direction and flex-wrap properties.
+. justify-content - Used to align the flex items.
+  . Justify-content: flex-start - Aligns the flex items at the beginning of the container.
+  . Justify-content: flex-end - Aligns the flex items at the end of the container. 
+  . Justify-content: space-around - Displays the flex items with space before, between, and after the lines.
+  . Justify-content: space-between - Displays the flex items with space between the lines.
+. align-items - Used to align the flex items.
+  . align-items: flex-start - Aligns the flex items at the top of the container.
+  . align-items: flex-end - Aligns the flex items at the bottom of the container.
+  . align-items: stretch - Stretches the flex items to fill the container.
+  . align-items: baseline - Aligns the flex items such as their baselines aligns.  
+. align-content - Used to align the flex lines.
+  . align-content: space-between - Displays the flex lines with equal space between them.
+  . align-content: space-around - Displays the flex lines with space before, between, and after them.
+  . align-content: stretch - Stretchs the flex lines to take up the remaining space (this is default).
+  . align-content: center - Displays the flex lines in the middle of the container.
+  . align-content: flex-start - Displays the flex lines at the start of the container.
+  . align-content: flex-end - Displays the flex lines at the end of the container.
+  
+*/
+.flex_container {
+  display: flex; /*The 'flex_container' become flexible by setting the 'display' property to 'flex' /*Flexible layout must a parent element with the display property set to flex*/ 
+  flex-wrap: wrap;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  background-color: Dodgerblue;
+  
+}
+
+.flex_container > div { /*The (>) is a child selector, it selects all elements that are the children of the specified element*/
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 75px;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Flexbox examples provided by w3schools</h2>
+
+<div class="flex_container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+
+  
+</div>
+
+
+</body>
+</html>
